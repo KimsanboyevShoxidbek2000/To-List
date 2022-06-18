@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css"
+      integrity="sha512-NZ19NrT58XPK5sXqXnnvtf9T5kLXSzGQlVZL9taZWeTBtXoN3xIfTdxbkQh6QSoJfJgpojRqMfhyqBAAEeiXcA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+
+  </head>
+  <body>
+    <!-- Todo section start -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Todo List</h1>
+        </div>
+        <div class="col-4 offset-4 p-0">
+          <form onsubmit="addTodo">
+            <label for="username">Username</label>
+            <input
+              class="form-control mb-2"
+              type="text"
+              name="username"
+              placeholder="username"
+              id="username"
+            />
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="password"
+              id="password"
+              class="form-control mb-2"
+            />
+            <div
+              class="eye float-end"
+              style="transform: translate(-10px, -35px)"
+            >
+              <i
+                id="eye"
+                class="fa fa-eye-slash"
+                aria-hidden="true"
+                style="cursor: pointer"
+              ></i>
+            </div>
+            <button
+              class="btn btn-outline-success float-lg-end mt-2"
+              type="submit"
+              id="handle-submit"
+            >
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Todo section end -->
+
+    <!-- cards section start -->
+    <div class="container">
+      <div class="row" id="result">
+        
+      </div>
+    </div>
+    <!-- cards section end -->
+    <script src="js/main.js"></script>
+  </body>
+  <!-- agar siz to list ni ishlatmoqchi
+       bo'lsangiz terminaldan json-serverni yurgizib olishingiz kerak bo'ladi 
+       terminalga << json-server --watch db.json >>
+     -->
+</html>
